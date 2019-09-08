@@ -40,4 +40,22 @@ end
 # Part III
 def hash_2_array contacts
     # YOUR CODE HERE
+    array = []
+    email = []
+    phone = []
+    name = []
+    
+    contacts.each do [key, value]
+        key2 = :"#{key}"
+        email << contacts[key2][:email]
+        phone << contacts[key2][:phone]
+        name << "#{key}"
+    end 
+    
+    array << email
+    array << phone 
+    array << name 
+    
+    return array
+ 
 end
