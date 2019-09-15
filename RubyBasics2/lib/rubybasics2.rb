@@ -9,6 +9,11 @@ end
 # Part II
 def starts_with_consonant? s
   # YOUR CODE HERE
+  if (s[0] =~/[bcdfghjklmnprstvwxyz]+/i)
+    return true
+  else
+    return false
+  end
 end
 
 # Part III
