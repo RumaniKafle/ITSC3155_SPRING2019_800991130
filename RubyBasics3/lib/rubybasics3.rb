@@ -4,9 +4,13 @@ class BookInStock
 # YOUR CODE HERE
  attr_accessor :isbn, :price
  
- def initialize isbn, price
-     @isbn = isbn 
-     @price = Float(price)
-     raise ArgumentError if isbn.empty? || price <= 0
- end
+    def initialize isbn, price
+        @isbn = isbn 
+        @price = Float(price)
+        raise ArgumentError if isbn.empty? || price <= 0
+    end
+ 
+    def price_as_string
+      format("$%.2f", @price)
+    end
 end
