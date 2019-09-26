@@ -7,6 +7,6 @@ class BookInStock
   def initialize isbn,price
       @isbn = isbn
       @price = Float(price)
-      
+      raise ArgumentError if isbn.empty? || price <= 0
   end
 end
